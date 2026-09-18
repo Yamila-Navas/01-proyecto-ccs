@@ -1,0 +1,125 @@
+/* Variables */
+:root{
+    --primario-color: #faebfa;
+    --secundario-color: #e086e0;
+    --acento-color: #d839d8;
+    --font-family: "Inter", sans-serif;
+    --texto-primario-color: #242424;
+    --texto-secundario-color: #313131;
+    --texto-acento-color: #ffffff;
+}
+
+/* Generales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primario-color);
+    color: var(--texto-secundario-color);
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    color: var(--texto-acento-color);
+    padding: 150px 10px 10px 10px;
+    font-size: 5rem;
+}
+
+h2 {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: var(--texto-primario-color);
+}
+
+main {
+    padding: 50px;
+    min-height: 40vh;
+}
+
+/* menu */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--secundario-color);
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--texto-primario-color);
+}
+
+/* hero */
+.hero {
+    height: 500px;
+    background-image: url('../assets/fondo-principal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero p {
+    color: var(--texto-acento-color);
+    font-size: 2rem;
+}
+
+/* seccion sobre mi */
+
+/* seccion proyectos y seccion servicios */
+.section-proyectos ul,
+.section-servicios ul {
+    list-style: none;
+}
+
+.section-proyectos li,
+.section-servicios li {
+    display: inline-block;
+    padding: 0 25px;
+    margin-bottom: 30px;
+}
+
+.section-proyectos img,
+.section-servicios img {
+    width: 300px;
+    object-fit: cover;
+}
+
+.section-proyectos p,
+.section-servicios p {
+    max-width: 300px;
+}
+
+/* seccion contacto */
+button {
+    background-color: var(--acento-color);
+    color: var(--texto-acento-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: var(--secundario-color);
+    padding: 10px;
+}
+
