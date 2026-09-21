@@ -27,7 +27,8 @@ h1 {
     font-size: 5rem;
     font-weight: 700;
     color: var(--texto-acento-color);
-    padding: 150px 10px 10px 10px;
+    padding: 150px 10px 10px;
+   
 }
 
 h2 {
@@ -50,8 +51,8 @@ main {
 
 /* menu */
 nav {
-    position: fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
     background-color: var(--secundario-color);
     padding: 15px;
 }
