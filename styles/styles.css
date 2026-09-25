@@ -13,6 +13,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -51,19 +52,25 @@ main {
 
 /* menu */
 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     background-color: var(--secundario-color);
-    padding: 15px;
+    padding: 15px 50px;
+}
+
+nav img {
+    width: 30px;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     list-style: none;
-}
-
-nav li {
-    display: inline;
-    margin-right: 15px;
 }
 
 a {
@@ -93,26 +100,29 @@ a {
 /* seccion sobre mi */
 
 /* seccion proyectos y seccion servicios */
-.section-proyectos ul,
-.section-servicios ul {
+.card ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
 }
 
-.section-proyectos li,
-.section-servicios li {
-    display: inline-block;
-    padding: 0 25px;
-    margin-bottom: 30px;
+.card li {
+    background-color: #e086e0;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 15px rgba(68, 68, 68, 0.774);
 }
 
-.section-proyectos img,
-.section-servicios img {
+.card img {
     width: 300px;
     object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
-.section-proyectos p,
-.section-servicios p {
+.card p {
     max-width: 300px;
 }
 
@@ -120,6 +130,22 @@ h3 {
     font-size: 1.2rem;
     line-height: 1.5;
     color: var(--texto-primario-color);
+}
+
+.destacada {
+    position: relative;
+}
+
+.etiqueta-destacada {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--acento-color);
+    color: var(--texto-acento-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius:0 8px 0 8px;
 }
 
 /* seccion contacto */
