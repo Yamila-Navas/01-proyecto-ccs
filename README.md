@@ -1,11 +1,13 @@
-<h1>Mi Porfolio</h1>
+# Mi Porfolio
 <hr>
 Aplicación web creada como práctica para aprender desarrollo web.
 
-## Tecnologías
-- HTML
-- CSS
-- JavaScript
+**Tecnologías**
+1. HTML
+2. CSS
+3. JavaScript
 
 ## Cómo utilizarlo
 Cloná el repositorio y abrí el archivo index.html.
+
+[https://github.com/Yamila-Navas/01-proyecto-ccs.git](LINK)
