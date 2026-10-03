@@ -13,7 +13,10 @@
     <header>
         <nav>
             <img src="../assets/logo.png" alt="logo">
-            <ul>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            <ul id="menu">
                 <li><a href="../index.html">Sobre Mi</a></li>
                 <li><a href="./proyectos.html">Proyectos</a></li>
                 <li><a href="./servicios.html">Servicios</a></li>
@@ -23,7 +26,7 @@
 
         <section class="hero">
             <h1>Yamila Soledad Navas</h1>
-            <p>Bienvenido a mi portafolio</p>
+            <p>Bienvenido a mi Arte Digital</p>
         </section>
     </header>
     <main>
@@ -33,61 +36,117 @@
             <ul>
                 <li class="destacada">
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 1">
-                    <h3>Proyecto 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                     <p class="etiqueta-destacada">Estrella </p>
+                </li>
+
+                <li>
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
+                    <div>
+                        <h3>Proyecto 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
 
                 <li class="destacada">
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
-                    <h3>Proyecto 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 3</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                     <p class="etiqueta-destacada">Destacado</p>
                 </li>
 
                 <li>
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
-                    <h3>Proyecto 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 4</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
 
                 <li>
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 1">
-                    <h3>Proyecto 4</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 5</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
 
                 <li>
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
-                    <h3>Proyecto 5</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 6</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
 
                 <li>
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
-                    <h3>Proyecto 6</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 7</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
 
                 <li>
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
-                    <h3>Proyecto 7</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 8</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
 
                 <li>
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
-                    <h3>Proyecto 8</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div>
+                        <h3>Proyecto 9</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
+                    <div>
+                        <h3>Proyecto 10</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </li>
             </ul>
-
-            
-
         </section>
     </main>
     <footer>
-        <p>&copy; Mi Portafolio. Todos los derechos reservados.</p>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="../assets/logos/facebook.png" alt="Ingresa a nuestra pagina de facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="../assets/logos/instagram.png" alt="Ingresa a nuestra pagina de instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/?lang=es" target="_blank">
+                    <img src="../assets/logos/x.png" alt="Ingresa a nuestra pagina de X">
+                </a>
+            </li>
+        </ul>
+        <p>&copy;<span id="year"></span> Yamila Navas. Todos los Derechos Reservados</p>
     </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector("#menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script> 
 </body>
 </html>

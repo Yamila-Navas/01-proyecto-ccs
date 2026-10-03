@@ -13,7 +13,10 @@
     <header>
         <nav>
             <img src="./assets/logo.png" alt="logo">
-            <ul>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            <ul id="menu">
                 <li><a href="./index.html">Sobre Mi</a></li>
                 <li><a href="./pages/proyectos.html">Proyectos</a></li>
                 <li><a href="./pages/servicios.html">Servicios</a></li>
@@ -23,21 +26,59 @@
 
         <section class="hero">
             <h1>Yamila Soledad Navas</h1>
-            <p>Bienvenido a mi portafolio</p>
+            <p>Bienvenido a mi Arte Digital</p>
         </section>
     </header>
     <main>
         <section class="section-sobre-mi">
             <h2>Sobre Mi</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni perspiciatis, eum, assumenda, architecto pariatur culpa nemo ipsa blanditiis rerum veniam ipsum mollitia! Sunt dolorem dolores non alias sapiente natus eius?
-            Reprehenderit delectus corporis nisi incidunt est vel illum, magni optio minima quidem perspiciatis dolor aperiam, nesciunt ratione quod, mollitia voluptates suscipit fugit architecto minus cupiditate! Consequatur inventore eligendi at dolorum.
-            Quidem, autem! Modi, accusantium, sed quibusdam maxime itaque, eligendi numquam optio tempora quas nihil voluptas rem tempore maiores consequuntur cumque. Dolorem optio omnis earum placeat obcaecati maxime praesentium officia debitis?
-            Incidunt asperiores rerum aliquid voluptates ipsa magnam non ratione porro ex, laudantium consequuntur quisquam. Tempora, distinctio ut et, dolore ipsa eveniet, ipsum quasi ex sequi quas esse facilis impedit quos!
-            Quod sint animi impedit officiis reprehenderit illum quis maxime nemo magnam voluptatum tenetur a soluta aliquam, id maiores neque vel debitis possimus aut. Similique tenetur quidem vitae doloremque, eius omnis.</p>
+            <div class="fondo-decorativo"></div>
+            <img src="./assets/beautiful.jpg" alt="Mi foto">
+            <div class="parrafo-sobre-mi">
+                <p>
+                    Soy <span class="negrita">artista digital</span> y me apasiona transformar ideas, emociones e historias en imágenes. Exploro diferentes estilos y
+                    técnicas para crear ilustraciones que tengan una identidad propia y conecten con quienes las observan.
+                    <br>
+                    Mi trabajo combina creatividad, color y composición, buscando siempre experimentar y encontrar nuevas formas de
+                    expresar una idea a través del arte.
+                    <br>
+                    Además de realizar proyectos personales, me interesa colaborar en proyectos donde la ilustración y el diseño visual
+                    puedan aportar personalidad y contar una historia.
+                    <br>
+                    <span class="negrita">Cada obra comienza con una idea y termina convirtiéndose en una imagen.</span>
+                </p>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; Mi Portafolio. Todos los derechos reservados.</p>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./assets/logos/facebook.png" alt="Ingresa a nuestra pagina de facebook">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./assets/logos/instagram.png" alt="Ingresa a nuestra pagina de instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://x.com/?lang=es" target="_blank">
+                    <img src="./assets/logos/x.png" alt="Ingresa a nuestra pagina de X">
+                </a>
+            </li>
+        </ul>
+        <p>&copy;<span id="year"></span> Yamila Navas. Todos los Derechos Reservados</p>
     </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector("#menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    </script> 
 </body>
 </html>
