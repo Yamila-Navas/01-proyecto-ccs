@@ -246,7 +246,8 @@ h3 {
 .fondo-deco-contacto {
     grid-area: contenido;
     background-color: var(--pastel-color);
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin: 0 auto;
     border-radius: 0 700px;
 }
@@ -261,7 +262,8 @@ form {
 }
 
 label {
-    min-width: 350px;
+    width: 100%;
+    max-width: 350px;
     text-align: start;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -270,7 +272,8 @@ label {
 }
 
 input, textarea {
-    min-width: 350px;
+    width: 100%;
+    max-width: 350px;
     margin-bottom: 30px;
     height: 30px;
     border: 3px solid var(--pastel-color);
@@ -328,18 +331,7 @@ footer img {
     width: 100%;
 }
 
-/* movile muy pequño */
-@media(max-width:680px){
-    /* seccion contacto*/
-    .fondo-deco-contacto {
-        display: none;
-    }
 
-    label, input, textarea {
-        width: 100%;
-        min-width: 100%;
-    }
-}
 
 /* desktop  */
 @media(min-width:1024px){
@@ -368,6 +360,7 @@ footer img {
     /* seccion sobre mi */
     .section-sobre-mi{
         width: 100%;
+        max-width: 1200px;
         min-height: 800px;
         margin: 0 auto;
         grid-template-columns: repeat(2, 1fr);
@@ -429,12 +422,4 @@ footer img {
     }
 
     /* seccion contacto */
-}
-
-/* desktop grandes */
-@media(min-width:1500px){
-    /* seccion sobre mi */
-    .section-sobre-mi{
-        width: 80%;
-    }
 }
