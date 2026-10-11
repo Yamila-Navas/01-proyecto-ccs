@@ -48,7 +48,7 @@ p {
 }
 
 main {
-    padding: 50px;
+    padding: 20px;
     min-height: 40vh;
 }
 
@@ -58,64 +58,46 @@ main {
 }
 
 /* menu navegacion */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-color {
+    background-color: var(--secundario-color) !important;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 10;
-    background-color: var(--secundario-color);
-    padding: 15px 50px;
 }
 
-nav img {
+.nav-logo {
     width: 30px;
 }
 
-.menu-toggle {
+.nav-link {
+    transition: font-weight 0.3s ease, color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
     display: block;
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
-    cursor: pointer;
+    width: 100%;
+    max-width: 95px;
+    margin: 0 auto;
+    height: 2px;
+    margin-top: 2px;
 }
 
-nav ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 200px;
-    background-color: var(--secundario-color);
-    padding: 20px;
-    list-style: none;
+.nav-link:hover {
+    color: var(--acento-color) !important;
+    font-weight: 500;
 }
 
-nav ul.active {
-    display: flex;
-}
-
-a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--texto-primario-color);
+.nav-link:hover::after {
+    background-color: var(--acento-color);
 }
 
 /* hero : mi banner */
 .hero {
     height: 300px;
-    background-image: url('../assets/img4.jpg');
+    background-image: url('../assets/hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -124,7 +106,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 .hero p {
@@ -181,15 +163,58 @@ a {
     padding: 10px 20px;
 }
 
+/* seccion acordion */
+.section-acordion {
+    margin-top: 50px;
+}
+
+.acordion-rosa {
+    --bs-accordion-active-bg:var(--secundario-color);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(253, 13, 253, 0.25);
+}
+
+.deco-acordion {
+    background-color: var(--pastel-color);
+    width: 50%;
+    height: auto;
+
+    background-image: url("../assets/galeria/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 5px;
+}
+
+/* galeria */
+.carousel-medida {
+    width: 100%;
+    max-height: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-medida .carousel-item {
+    max-height: 800px;
+}
+
+.carousel-medida img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: end;
+}
+
 /* seccion proyectos y seccion servicios*/
-.card ul {
+.tarjeta ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 65px;
+    padding: 0;
 }
 
-.card li {
+.tarjeta li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -199,35 +224,71 @@ a {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 3px 3px 15px rgba(68, 68, 68, 0.774);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card img {
+.tarjeta li:hover {
+    transform: scale(1.05);
+}
+
+.visual {
+    position: relative;
+}
+
+.tarjeta img {
     width: 100%;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
 
-h3 {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: var(--texto-primario-color);
-    margin-bottom: 5px;
+.boton-ver {
+    text-decoration: none;
+    padding: 5px;
+    background-color: var(--secundario-color);
+    border-radius: 8px;
+    
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.destacada {
-    position: relative;
+.boton-ver p {
+    color: var(--texto-acento-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.boton-ver:hover, .boton-ver:focus{
+    background-color: var(--acento-color);
+    color: var(--texto-primario-color);
 }
 
 .etiqueta-destacada {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 5px;
+    left: 5px;
     background-color: var(--acento-color);
     color: var(--texto-acento-color);
-    text-transform: uppercase;
     font-weight: 500;
-    padding: 5px 10px;
-    border-radius:0 8px 0 8px;
+    padding: 5px;
+    border-radius:8px;
+    font-size: 1rem;
+    background-color: #d39401;
+}
+
+
+h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    color: var(--texto-primario-color);
+    margin-bottom: 5px;
 }
 
 /* seccion contacto */
@@ -287,15 +348,21 @@ textarea {
     min-height: 300px;
 }
 
-button {
+.btn-violet {
+    background-color: var(--secundario-color);
+    color: var(--texto-primario-color);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-violet:hover, .btn-violet:focus {
     background-color: var(--acento-color);
     color: var(--texto-acento-color);
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1.3rem;
-    margin-top: 40px;
-    cursor: pointer;
+}
+
+.btn-violet:active {
+    background-color: var(--acento-color) !important;
+    color: var(--texto-acento-color) !important;
 }
 
 /* footer */
@@ -320,6 +387,12 @@ footer ul li {
     border-radius: 50%;
     box-shadow: 1px 1px 5px  rgba(68, 68, 68, 0.774);
     font-size: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer ul li:hover, footer ul li:focus {
+    background-color: var(--pastel-color);
+    transition: background-color 0.3s ease;
 }
 
 footer a {
@@ -335,17 +408,8 @@ footer img {
 
 /* desktop  */
 @media(min-width:1024px){
-    /* menu navegacion */
-    .menu-toggle {
-        display: none;
-    }
-
-    nav ul {
-        position: static;
-        width: auto;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
+    main {
+        padding: 50px;
     }
 
     /* hero : mi banner */
@@ -399,27 +463,10 @@ footer img {
     }
 
     /* seccion proyectos y seccion servicios */
-    .card ul {
+    .tarjeta ul {
         width: 90%;
         margin: 0 auto;
         grid-auto-flow: dense; 
+        padding: 0;
     }
-
-    .card li.destacada {
-        grid-column: span 2;
-        flex-direction: row; 
-        background-color: #d39401b6;
-    }
-
-    .destacada img{
-        width: 80%;
-        height: 100%;
-        border-radius: 8px;
-    }
-
-    .etiqueta-destacada {
-        padding: 10px 20px;
-    }
-
-    /* seccion contacto */
 }

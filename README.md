@@ -10,4 +10,4 @@ Aplicación web creada como práctica para aprender desarrollo web.
 ## Cómo utilizarlo
 Cloná el repositorio y abrí el archivo index.html.
 
-[https://github.com/Yamila-Navas/01-proyecto-ccs.git](LINK)
+[Repositorio en GitHub](https://github.com/Yamila-Navas/01-proyecto-ccs.git)

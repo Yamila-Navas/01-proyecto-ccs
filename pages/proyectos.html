@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,17 +13,24 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="../assets/logo.png" alt="logo">
-            <button class="menu-toggle" aria-label="Abrir menú">
-                ☰
-            </button>
-            <ul id="menu">
-                <li><a href="../index.html">Sobre Mi</a></li>
-                <li><a href="./proyectos.html">Proyectos</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/logo.png" alt="logo" class="nav-logo"></a>
+                <button class="navbar-toggler mt-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./sobre-mi.html">Sobre mi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./galeria.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./proyectos.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <section class="hero">
@@ -30,89 +39,141 @@
         </section>
     </header>
     <main>
-        <section class="section-proyectos card">
+        <section class="section-proyectos tarjeta">
             <h2>Proyectos</h2>
 
             <ul>
-                <li class="destacada">
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 1">
-                    <div>
-                        <h3>Proyecto 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <p class="etiqueta-destacada">Estrella </p>
-                </li>
+                
 
-                <li>
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
+                <li class="visual">
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
                     <div>
                         <h3>Proyecto 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
+                    <div>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
+                    </div>
                 </li>
 
-                <li class="destacada">
+                <li class="visual">
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
                     <div>
-                        <h3>Proyecto 3</h3>
+                        <h3>Proyecto 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                    <p class="etiqueta-destacada">Destacado</p>
-                </li>
-
-                <li>
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
                     <div>
-                        <h3>Proyecto 4</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
+
+                        <!-- etiqueta de destacado -->
+                        <p class="etiqueta-destacada">Estrella</p>
                     </div>
                 </li>
 
-                <li>
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 1">
-                    <div>
-                        <h3>Proyecto 5</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </li>
-
-                <li>
+                <li class="visual">
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
                     <div>
-                        <h3>Proyecto 6</h3>
+                        <h3>Proyecto 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
-                </li>
-
-                <li>
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
                     <div>
-                        <h3>Proyecto 7</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
+
+                        <!-- etiqueta de destacado -->
+                        <p class="etiqueta-destacada">Estrella</p>
                     </div>
                 </li>
 
-                <li>
+                <li class="visual">
                     <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
                     <div>
-                        <h3>Proyecto 8</h3>
+                        <h3>Proyecto 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
                     </div>
                 </li>
 
-                <li>
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
+                <li class="visual">
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
                     <div>
-                        <h3>Proyecto 9</h3>
+                        <h3>Proyecto 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
                     </div>
                 </li>
 
-                <li>
-                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 3">
+                <li class="visual">
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
                     <div>
-                        <h3>Proyecto 10</h3>
+                        <h3>Proyecto 2</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="visual">
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
+                    <div>
+                        <h3>Proyecto 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
+
+                        <!-- etiqueta de destacado -->
+                        <p class="etiqueta-destacada">Nuevo</p>
+                    </div>
+                </li>
+
+                <li class="visual">
+                    <img src="../assets/imagen-placeholder.webp" alt="proyecto 2">
+                    <div>
+                        <h3>Proyecto 2</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <!-- boton de ver proyecto -->
+                        <a class="boton-ver" href="" aria-label="Ir al proyecto 2">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M607.5-372.5Q660-425 660-500t-52.5-127.5Q555-680 480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320t127.5-52.5Zm-204-51Q372-455 372-500t31.5-76.5Q435-608 480-608t76.5 31.5Q588-545 588-500t-31.5 76.5Q525-392 480-392t-76.5-31.5ZM214-281.5Q94-363 40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200q-146 0-266-81.5ZM480-500Zm207.5 160.5Q782-399 832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280q113 0 207.5-59.5Z"/></svg>
+                            <p>Ver proyecto</p>
+                        </a>
+
+                        <!-- etiqueta de destacado -->
+                        <p class="etiqueta-destacada">Estrella</p>
                     </div>
                 </li>
             </ul>
@@ -148,5 +209,9 @@
             menu.classList.toggle("active");
         });
     </script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>

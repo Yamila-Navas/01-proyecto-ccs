@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
     <title>Mi Porfolio</title>
 </head>
+
 <body>
     <header>
-        <nav>
-            <img src="./assets/logo.png" alt="logo">
-            <button class="menu-toggle" aria-label="Abrir menú">
-                ☰
-            </button>
-            <ul id="menu">
-                <li><a href="./index.html">Sobre Mi</a></li>
-                <li><a href="./pages/proyectos.html">Proyectos</a></li>
-                <li><a href="./pages/servicios.html">Servicios</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary nav-color">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img src="./assets/logo.png" alt="logo" class="nav-logo"></a>
+                <button class="navbar-toggler mt-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./pages/sobre-mi.html">Sobre mi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/galeria.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/proyectos.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <section class="hero">
@@ -36,17 +54,69 @@
             <img src="./assets/beautiful.jpg" alt="Mi foto">
             <div class="parrafo-sobre-mi">
                 <p>
-                    Soy <span class="negrita">artista digital</span> y me apasiona transformar ideas, emociones e historias en imágenes. Exploro diferentes estilos y
-                    técnicas para crear ilustraciones que tengan una identidad propia y conecten con quienes las observan.
+                    Soy <span class="negrita">artista digital</span> y me apasiona transformar ideas, emociones e
+                    historias en imágenes. Exploro diferentes estilos y
+                    técnicas para crear ilustraciones que tengan una identidad propia y conecten con quienes las
+                    observan.
                     <br>
-                    Mi trabajo combina creatividad, color y composición, buscando siempre experimentar y encontrar nuevas formas de
+                    Mi trabajo combina creatividad, color y composición, buscando siempre experimentar y encontrar
+                    nuevas formas de
                     expresar una idea a través del arte.
                     <br>
-                    Además de realizar proyectos personales, me interesa colaborar en proyectos donde la ilustración y el diseño visual
+                    Además de realizar proyectos personales, me interesa colaborar en proyectos donde la ilustración y
+                    el diseño visual
                     puedan aportar personalidad y contar una historia.
                     <br>
                     <span class="negrita">Cada obra comienza con una idea y termina convirtiéndose en una imagen.</span>
                 </p>
+            </div>
+        </section>
+
+        <section class="section-acordion container">
+            <div class="row">
+                <h2 class="col-12">Mi enfoque de trabajo</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 accordion acordion-rosa" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            Creatividad con propósito
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong class="negrita">This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            Atención al detalle
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong class="negrita">This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            Compromiso con cada proyecto
+                        </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong class="negrita">This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 deco-acordion"></div>
             </div>
         </section>
     </main>
@@ -72,13 +142,17 @@
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
-        
+
         const menuToggle = document.querySelector(".menu-toggle");
         const menu = document.querySelector("#menu");
 
         menuToggle.addEventListener("click", () => {
             menu.classList.toggle("active");
         });
-    </script> 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
