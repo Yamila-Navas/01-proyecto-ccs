@@ -317,6 +317,13 @@ h3 {
     margin-bottom: 5px;
 }
 
+/* seccion marcas  */
+.section-marcas img {
+    height: 100px;
+    width: auto;
+}
+
+
 /* seccion contacto */
 .section-contacto {
     display: grid;
