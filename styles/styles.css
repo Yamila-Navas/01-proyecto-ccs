@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 /* Generales */
@@ -37,7 +38,7 @@ h1 {
 h2 {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-transform: uppercase;
     color: var(--texto-primario-color);
 }
@@ -48,8 +49,15 @@ p {
 }
 
 main {
-    padding: 20px;
-    min-height: 40vh;
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-top: clamp(1.2rem, 3.5vw, 3.5rem);
+    margin-bottom: clamp(1.2rem, 3.5vw, 3.5rem);
 }
 
 .negrita {
@@ -72,7 +80,7 @@ main {
 }
 
 .nav-link {
-    transition: font-weight 0.3s ease, color 0.3s ease;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .nav-link::after {
@@ -80,9 +88,8 @@ main {
     display: block;
     width: 100%;
     max-width: 95px;
-    margin: 0 auto;
     height: 2px;
-    margin-top: 2px;
+    margin: 2px auto 0;
 }
 
 .nav-link:hover {
@@ -92,6 +99,15 @@ main {
 
 .nav-link:hover::after {
     background-color: var(--acento-color);
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid var(--texto-acento-color);
+    outline-offset: 3px;
+}
+
+.nav-link:active {
+    color: var(--texto-acento-color) !important;
 }
 
 /* hero : mi banner */
@@ -106,7 +122,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 60px; */
 }
 
 .hero p {
@@ -168,15 +183,26 @@ main {
     margin-top: 50px;
 }
 
+.flex-acordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "acordion acordion";
+    gap: 20px;
+}
+
 .acordion-rosa {
+    grid-area: acordion;
     --bs-accordion-active-bg:var(--secundario-color);
     --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(253, 13, 253, 0.25);
 }
 
 .deco-acordion {
+    display: none;
+    grid-area: deco;
+
     background-color: var(--pastel-color);
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 100%;
 
     background-image: url("../assets/galeria/img1.jpg");
     background-repeat: no-repeat;
@@ -227,7 +253,7 @@ main {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tarjeta li:hover {
+.tarjeta li:hover , .tarjeta li:focus{
     transform: scale(1.05);
 }
 
@@ -408,10 +434,6 @@ footer img {
 
 /* desktop  */
 @media(min-width:1024px){
-    main {
-        padding: 50px;
-    }
-
     /* hero : mi banner */
     .hero {
         height: 500px;
@@ -426,7 +448,6 @@ footer img {
         width: 100%;
         max-width: 1200px;
         min-height: 800px;
-        margin: 0 auto;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto 1fr;
         grid-template-areas: 
@@ -468,5 +489,14 @@ footer img {
         margin: 0 auto;
         grid-auto-flow: dense; 
         padding: 0;
+    }
+
+    /* seccion acordion */
+    .flex-acordion {
+        grid-template-areas: "acordion deco";
+    }
+
+    .deco-acordion {
+        display: block;
     }
 }
