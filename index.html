@@ -12,8 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-
+        rel="stylesheet"
+    >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
 
     <title>Mi Porfolio</title>
@@ -47,7 +48,12 @@
         </div>
     </header>
     <main>
-        <section class="section-sobre-mi">
+        <section class="section-gracias">
+            <p>Gracias por leerme!</p>
+            <img src="./assets/mujer.png" alt="">
+        </section>
+        
+        <section data-aos="fade-up" data-aos-duration="2000" class="section-sobre-mi">
             <h2>Sobre Mi</h2>
             <div class="fondo-decorativo"></div>
             <img src="./assets/beautiful.jpg" alt="Mi foto">
@@ -71,7 +77,7 @@
             </div>
         </section>
 
-        <section class="section-acordion">
+        <section data-aos="fade-up" data-aos-duration="2000"  class="section-acordion">
             <h2 class="col-12">Mi enfoque de trabajo</h2>
             <div class="flex-acordion">
                 <div class="accordion acordion-rosa" id="accordionPanelsStayOpenExample">
@@ -115,7 +121,8 @@
                 <div class="deco-acordion"></div>
             </div>
         </section>
-        <section class="section-galeria">
+
+        <section data-aos="fade-up" data-aos-duration="2000"  class="section-galeria">
             <h2>Galería</h2>
             <div id="carouselExampleCaptions" class="carousel slide carousel-medida">
                 <div class="carousel-indicators">
@@ -183,6 +190,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
