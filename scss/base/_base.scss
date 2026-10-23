@@ -1,0 +1,42 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+
+/* Reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+/* Generales */
+body {
+    font-family: $font-family;
+    background-color: $color-bg;
+    color: $color-texto-secundario;
+    text-align: center;
+    letter-spacing: 1.5px;
+    position: relative;
+}
+
+main {
+    width: 100%;
+    max-width: rem($width-main);
+    margin: 0 auto;
+    padding: 0 rem($espaciado-base*2);
+}
+
+section {
+    margin-top: clamp(rem($espaciado-base*2), vw(50px), rem($espaciado-base*6));
+    margin-bottom: clamp(rem($espaciado-base*2), vw(120px), rem($espaciado-base*13));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    }
+}

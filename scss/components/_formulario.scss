@@ -1,0 +1,53 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+@use "../utilities/mixins" as *;
+
+/* seccion contacto */
+.formulario {
+    display: grid;
+    grid-template-rows:  1fr;
+    grid-template-areas: "contenido";
+    
+    > .fondo-deco-contacto {
+        grid-area: contenido;
+        background-color: $color-terciario;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border-radius: 0 700px;
+    }
+
+    > form {
+        grid-area: contenido;
+        @include flex-center(column);
+        padding: 30px;
+
+        > label {
+            width: 100%;
+            max-width: 350px;
+            text-align: start;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        > input, textarea {
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 30px;
+            height: 30px;
+            border: 3px solid $color-terciario;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        > textarea {
+            min-height: 300px;
+        }
+    }
+}
+
+

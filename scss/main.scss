@@ -1,0 +1,18 @@
+@use "utilities/variables" as *;
+
+@use "base/base";
+@use "base/tipografia";
+
+@use "layout/nav";
+@use "layout/header";
+@use "layout/footer";
+
+@use "components/mensaje-flotante";
+@use "components/sobre-mi";
+@use "components/acordion";
+@use "components/galeria";
+@use "components/cards";
+@use "components/marcas";
+@use "components/formulario";
+
+@use "components/buttons";

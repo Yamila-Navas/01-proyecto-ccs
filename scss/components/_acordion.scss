@@ -1,0 +1,35 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+@use "../utilities/mixins" as *;
+
+/* seccion acordion */
+.flex-acordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "acordion acordion";
+    gap: rem($espaciado-base*2);
+
+    > .acordion-rosa {
+        grid-area: acordion;
+        --bs-accordion-active-bg: #{$color-primario};
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #{darken($color-primario, 5%)};
+    }
+
+    > .deco-acordion {
+        display: none;
+        background-color: var(--color-terciario);
+        width: 100%;
+        height: 100%;
+        border-radius: $radio-borde;
+        @include background-image("../assets/galeria/img1.jpg");
+    }
+
+    @include desde('desktop'){
+        grid-template-areas: "acordion deco";
+
+        > .deco-acordion {
+            display: block;
+            grid-area: deco;
+        }
+    }
+}

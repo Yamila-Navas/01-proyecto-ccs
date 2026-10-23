@@ -1,0 +1,26 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+@use "../utilities/mixins" as *;
+
+/* hero : mi banner */
+.hero {
+    height: 300px;
+    @include background-image('../assets/hero.jpg');
+    background-attachment: fixed;
+    @include flex-center(column);
+
+    > p {
+        color: $color-texto-acento;
+        font-size: 1.5rem;
+        font-weight: $font-weight;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    @include desde('desktop') {
+        height: 500px;
+
+        > p {
+            font-size: 2rem;
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+@use "../utilities/mixins" as *;
+
+/* seccion proyectos y seccion servicios*/
+.tarjetas {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: rem($espaciado-base * 6);
+    padding: 0;
+
+    > li {
+        @include flex-center(column);
+        gap: rem($espaciado-base);
+        background-color: $color-primario;
+        padding: rem($espaciado-base * 2);
+        border-radius: $radio-borde;
+        box-shadow: 3px 3px 15px $color-box-shadow;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+
+        &:hover , &:focus{
+            transform: scale(1.05);
+        }
+
+        > img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: $radio-borde $radio-borde 0 0;
+        }
+
+        > .etiquetas-acciones {
+            > .boton-ver {
+                text-decoration: none;
+                padding: 5px;
+                background-color: $color-primario;
+                border-radius: $radio-borde;
+                
+                position: absolute;
+                top: 5px;
+                right: 5px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                transition: background-color 0.3s ease, color 0.3s ease;
+                
+                &:hover, &:focus{
+                    background-color: $color-secundario;
+                    color: $color-texto-primario;
+                }
+
+                > p {
+                    color: $color-texto-acento;
+                    font-size: rem($font-size-base);
+                    margin: 0;
+                }
+            }
+
+            > .etiqueta-destacada {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                background-color: $color-secundario;
+                color: $color-texto-acento;
+                font-weight: $font-weight;
+                padding: 5px;
+                border-radius:$radio-borde;
+                font-size: rem($font-size-base);
+                background-color: $color-acento;
+            }
+        }
+    }
+
+    @include desde('desktop'){
+        width: 90%;
+        margin: 0 auto;
+        grid-auto-flow: dense; 
+        padding: 0;
+    }
+}
+
+
+
+

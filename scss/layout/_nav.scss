@@ -1,0 +1,46 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+
+.nav-color {
+    background-color: $color-primario !important;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    .nav-logo {
+        width: rem(30px);
+    }
+
+    .nav-link {
+        transition: color 0.3s ease, font-weight 0.3s ease;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            max-width: 95px;
+            height: 2px;
+            margin: 2px auto 0;
+        }
+
+        &:hover {
+            color: $color-secundario !important;
+            font-weight: $font-weight;
+        }
+
+        &:hover::after {
+            background-color: $color-secundario;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-texto-acento;
+            outline-offset: 3px;
+        }
+
+        &:active {
+            color: $color-texto-acento !important;
+        }
+    }
+}

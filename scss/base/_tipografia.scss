@@ -1,0 +1,36 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+
+/* Generales titulos y textos */
+h1 {
+    font-size: clamp(rem($espaciado-base*4), vw(72px), rem($espaciado-base*8));
+    font-weight: $font-weight;
+    color: $color-texto-acento;
+    padding: $espaciado-base;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: $font-weight;
+    margin-bottom: rem($espaciado-base*5);
+    text-transform: uppercase;
+    color: $color-texto-primario;
+}
+
+h3 {
+    font-size: rem($font-size-base);
+    line-height: 1.2;
+    color: var(--color-texto-primario);
+    margin-bottom: rem($espaciado-base);
+}
+
+p {
+    font-size: rem($font-size-base); 
+    line-height: 1.6; 
+}
+
+.negrita {
+    font-weight: $font-weight;
+    color: $color-secundario;
+}

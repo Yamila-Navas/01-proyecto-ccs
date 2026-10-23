@@ -1,0 +1,40 @@
+@use "../utilities/variables" as *;
+@use "../utilities/functions" as *;
+@use "../utilities/mixins" as *;
+
+/* footer */
+footer {
+    background-color: $color-primario;
+    padding: rem($espaciado-base*2);
+
+    > ul {
+        @include flex-center();
+        gap: rem($espaciado-base*2);;
+        list-style: none;
+        margin-bottom: rem($espaciado-base);
+
+        > li {
+            flex-basis: rem($espaciado-base * 4 + 5);
+            padding: rem($espaciado-base);
+            background-color: $color-bg;
+            border-radius: 50%;
+            box-shadow: 1px 1px 5px  rgba(68, 68, 68, 0.774);
+            font-size: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            > a {
+                font-size: 0;
+               
+                > img {
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+
+            &:hover, &:focus {
+                background-color: $color-terciario;
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+}
